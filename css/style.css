@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #354B70;
+    --secondary-color: #F5AE59;
+    --third-color: #1EC6FF;
+    --whitecolor: #fff;
+    --blackcolor: #000;
+    --bgc: #EFEFEF;
+}
+/* BASE STYLE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER STYLE */
+
+header {
+    background-color: var(--primary-color); 
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-menu{
+    cursor: pointer;
+}
+.logo {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.navigation ul {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: uppercase;
+    padding-top: 15rem;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+.navigation ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.navigation ul li a {
+    color: var(--whitecolor);
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+}
+
+.navigation a:hover {
+    color: var(--secondary-color);
+
+}
+
+.close-btn {
+    width: 30px;
+    height: 30px;
+    float: right;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+path {
+    stroke: white;
+}
+
+
+
+/* SECTION MAIN */
+
+section.main {
+    background-color: var(--whitecolor);
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.left-col .main-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .3rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.left-col .main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    width: 80%;
+}
+
+.main-btn {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--blackcolor);
+    background-color: var(--secondary-color);
+    padding: .6rem .8rem;
+    margin-top: -1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-img {
+    max-width: 100%;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* SECTION SERVICES */
+
+section.services-section {
+    background-color: var(--bgc);
+    margin-top: 3rem;
+}
+
+.services-title h1 {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    font-size: 2rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+}
+
+.card {
+    width: 200px;
+    height: 220px;
+    background-color: var(--whitecolor);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.card:hover {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0,0.1);
+}
+
+.card-last {
+    margin-bottom: 3.5rem;
+}
+
+.card-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 1rem;
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-wrapper {
+    height: 100px;
+   
+}
+
+/* PRICING LIST */
+
+.pricing-title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.pricing-title::after {
+    content: '';
+    display: block;
+    background-image: url(/images/Vector-pricing.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 400px;
+    height: 30px;
+}
+
+.pricing-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card {
+    background-color: var(--bgc);
+    width: 360px;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--whitecolor);
+    background-color: var(--primary-color);
+    border-radius: 5px 5px 0 0;
+    padding: .5rem 1.5rem;
+    width: 360px;
+}
+
+.pricing-card-price {
+    color: var(--third-color);
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.pricing-card-desc {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.pricing-card-btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blackcolor);
+    font-weight: 600;
+    font-size: 1.3rem;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 2rem;
+    margin: 2.3rem 0 2.3rem ;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.testimonials ul {
+    padding-top: 1rem;
+}
+
+.testimonials li {
+    width: 280px;
+    height: 300px;
+    list-style: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+}
+
+.testimonials-img {
+    width: 6rem;
+    height: 6rem;
+    border: 5px solid var(--primary-color);
+    border-radius: 100%;
+    margin-top: -2rem;
+    object-fit: cover;
+}
+
+.testimonials blockquote {
+    padding: 1rem ;
+}
+
+/* CONTACT SECTION */
+
+section.contact {
+    background-color: var(--bgc);
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-left h2 {
+    padding-bottom: 2rem;
+}
+
+.contact-left label {
+    align-self: flex-start;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-left input, textarea {
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.send-message-cta {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blackcolor);
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.contact-right iframe {
+    width: 100%;
+    height: 70vh;
+    padding-top: 2.3rem;
+}
+
+ul.open-nav {
+    transform: translateX(0%);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 362px) {
+    .pricing-flex {
+        align-items: center;
+    }
+}
+
+@media (min-width: 650px) {
+
+    /* SERVICES SECTION */
+
+    .services-title {
+        padding-top: 2rem;
+    }
+
+    .grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+        justify-content: space-evenly;
+        gap: 3rem 0;
+    }
+
+    /* PRICING SECTION */
+
+    .pricing-title::after {
+        content: '';
+        display: block;
+        background-image: url(/images/Vector-pricing.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 400px;
+        height: 30px;
+        position: relative;
+        left: 120px;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    .testimonials li {
+        width: 360px;
+        height: 300px;
+    }
+
+    /* CONTACT SECTION */
+    
+    .contact-right {
+        width: 360px;
+        margin-left: -5rem;
+    } 
+
+    .contact-right iframe {
+        width: 100%;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+
+    /* MAIN SECTION */
+
+    .main-subtitle {
+        text-transform: lowercase;
+        font-size: 1.8rem !important;
+        width: 70%;
+        margin-top: 3rem;
+    }
+
+    .main-title {
+        width: 70%;
+        font-size: 4rem !important;
+    }
+
+    .main-btn {
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+
+    /* SERVICES SECTION */
+
+    .pricing-flex {
+        align-items: center;
+    }
+
+    .pricing-title::after {
+        content: '';
+        display: block;
+        background-image: url(/images/Vector-pricing.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 400px;
+        height: 30px;
+        position: relative;
+        left: 180px;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    .testimonials li {
+        width: 360px;
+        height: 300px;
+    }
+
+    /* CONTACT SECTION */
+    
+    .contact-left h2 {
+        font-size: 2rem;
+    }
+
+    label {
+        font-size: 1.4rem !important;
+    }
+
+    input, textarea {
+        padding: 3rem;
+    }
+    .contact-right {
+        width: 360px;
+        margin: 0 auto;
+    } 
+
+    .contact-right iframe {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /* HEADER SECTION */
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navigation ul {
+        transform: translateX(0);
+        position: unset;
+        width: auto;
+        height: auto;
+        background: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .navigation ul li {
+        margin: 0;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    /* SERVICES SECTION */
+
+    .grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 2rem;
+        justify-content: space-evenly;
+        gap: 3rem;
+    }
+
+    /* PRICING SECTION */
+
+    .pricing-title::after {
+        content: '';
+        display: block;
+        background-image: url(/images/Vector-pricing.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 400px;
+        height: 30px;
+        position: relative;
+        left: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* HEADER SECTION */
+
+    .logo {
+        margin-left: 3.6rem;
+    }
+
+    /* MAIN SECTION */
+
+    .main {
+        height: 90vh;
+        width: 1200px;
+        background-image: url(/images/vecteezy_cleaning-concept-with-woman-vacuuming-floor-with-vacuum-cleaner_.jpg);
+        background-repeat: no-repeat;
+        background-size: 700px 500px;
+        background-position: 500px 50px;
+    }
+
+    
+    .main-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 5rem;
+        gap: 0;
+        position: absolute;
+    }
+
+    .left-col {
+        flex: 0;
+        align-items: center;
+        margin-left: -10rem;
+    }
+
+    .left-col h3 {
+        font-size: 2rem !important;
+        width: 500px;
+        align-self: center;
+        text-align: left !important;
+        margin-left: -1rem;
+        margin-top: 1rem;
+        padding-left: 0;
+    }
+
+    .left-col h1 {
+        font-size: 3rem !important;
+        align-self: center;
+        padding-bottom: 2rem;
+        text-align: left !important;
+        margin-left: -4rem;
+    }
+
+    .main-btn {
+       position: relative;
+       top: 20rem;
+       left: -45rem;
+       margin-bottom: 5rem;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+
+    /* PRICING SECTION */
+
+    section.pricing {
+        height: 80vh;
+    }
+
+    .pricing-title::after {
+        content: '';
+        display: block;
+        background-image: url(/images/Vector-pricing.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 400px;
+        height: 30px;
+        position: relative;
+        left: 400px;
+    }
+
+    .pricing-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2px
+    }
+
+    .pricing-title {
+        margin: 2rem 0 3rem 0;
+    }
+
+    .pricing-card {
+        width: 360px;
+        height: 400px;
+    }
+
+    .pricing-card-title {
+        font-size: 1.5rem;
+    }
+
+    .pricing-card-price {
+        font-size: 5rem;
+        padding-top: 2rem;
+    }
+
+    .pricing-card-desc {
+        font-size: 1.8rem;
+    }
+
+    .pricing-card-btn {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    section.testimonials {
+        height: 80vh;
+    }
+
+    .testimonials-flex {
+        margin-top: 5rem;
+    }
+
+    .testimonials-flex ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .testimonials li {
+        width: 350px;
+        height: 400px;
+    }
+
+    
+    .testimonials blockquote {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .testimonials cite {
+        font-size: 1.5rem;
+    }
+
+
+    /* CONTACT SECTION */
+
+    .contact-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .contact-right {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    /* HEADER SECTION */
+
+    .logo {
+        margin-left: 4.3rem;
+    }
+
+    /* MAIN SECTION */
+
+    .main {
+        height: 100vh;
+        width: 1200px;
+        background-image: url(/images/vecteezy_cleaning-concept-with-woman-vacuuming-floor-with-vacuum-cleaner_.jpg);
+        background-repeat: no-repeat;
+        background-size: 700px 500px;
+        background-position: 600px 100px;
+        height: 80vh;
+    }
+
+    .left-col h3 {
+        margin-left: -9.5rem;
+        margin-top: -1rem;
+    }
+
+    .left-col h1 {
+        margin-left: -12.5rem;
+    }
+
+    .left-col .main-title {
+        width: 110%;
+    }
+
+    .main-btn {
+        margin-left: -7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* PRICING SECTION */
+
+    .pricing-title::after {
+        position: relative;
+        left: 500px;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    .testimonials-flex ul{
+        gap: 5.7rem;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact-flex {
+        padding-left: 12rem;
+    }
+}
